@@ -1,0 +1,1472 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 10:50:59 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 18324@OrdenadorPaule
+
+[2025-03-03 10:50:59 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 10:50:59 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 10:50:59 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 10:50:59 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 10:50:59 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 10:50:59 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:14:50 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 22612@OrdenadorPaule
+
+[2025-03-03 11:14:50 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:14:50 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:14:50 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:14:50 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:14:50 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:14:50 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-03-03 11:14:58 #8 type.registry] 
+New type domain.User
+
+[2025-03-03 11:14:58 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:32:51 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 3284@OrdenadorPaule
+
+[2025-03-03 11:32:51 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:32:51 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:32:51 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:32:51 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:32:51 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:32:51 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-03-03 11:32:56 #8 type.registry] 
+New type domain.User
+
+[2025-03-03 11:32:56 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:36:45 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 6120@OrdenadorPaule
+
+[2025-03-03 11:36:45 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:36:45 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:36:45 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:36:45 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:36:45 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:36:45 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+[2025-03-03 11:36:57 #8 type.registry] 
+New type domain.User
+
+[2025-03-03 11:36:57 #9 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:40:16 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 1432@OrdenadorPaule
+
+[2025-03-03 11:40:17 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:40:17 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:40:17 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:40:17 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:40:17 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:40:17 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:48:57 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 25488@OrdenadorPaule
+
+[2025-03-03 11:48:57 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:48:57 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:48:57 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:48:57 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:48:57 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:48:57 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:50:28 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 24912@OrdenadorPaule
+
+[2025-03-03 11:50:28 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:50:28 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:50:28 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:50:28 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:50:28 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:50:28 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:51:02 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 12176@OrdenadorPaule
+
+[2025-03-03 11:51:02 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:51:02 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:51:02 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:51:02 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:51:02 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:51:02 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:52:57 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 2456@OrdenadorPaule
+
+[2025-03-03 11:52:57 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:52:57 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:52:57 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:52:57 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:52:57 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:52:57 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:57:07 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 25460@OrdenadorPaule
+
+[2025-03-03 11:57:07 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:57:07 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:57:07 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:57:07 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:57:07 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:57:07 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:57:27 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 11868@OrdenadorPaule
+
+[2025-03-03 11:57:27 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:57:27 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:57:27 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:57:27 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:57:27 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:57:27 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:58:01 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 17692@OrdenadorPaule
+
+[2025-03-03 11:58:01 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:58:01 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:58:01 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:58:01 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:58:01 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:58:01 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 11:59:02 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 21892@OrdenadorPaule
+
+[2025-03-03 11:59:02 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 11:59:02 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 11:59:02 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 11:59:02 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 11:59:02 #6 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 11:59:02 #7 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 12:15:07 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 17604@OrdenadorPaule
+
+[2025-03-03 12:15:07 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 12:15:07 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 12:15:07 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 12:15:07 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 12:15:07 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 12:15:07 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 12:15:07 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 12:15:07 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 12:15:07 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 12:15:07 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 12:18:27 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 10372@OrdenadorPaule
+
+[2025-03-03 12:18:27 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 12:18:27 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 12:18:27 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 12:18:27 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 12:18:27 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 12:18:27 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 12:18:27 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 12:18:27 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 12:18:27 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 12:18:27 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 12:34:25 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 23832@OrdenadorPaule
+
+[2025-03-03 12:34:25 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 12:34:25 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 12:34:25 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 12:34:25 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 12:34:25 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 12:34:25 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 12:34:25 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 12:34:25 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 12:34:25 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 12:34:25 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 12:37:01 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 15484@OrdenadorPaule
+
+[2025-03-03 12:37:01 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 12:37:01 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 12:37:01 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 12:37:01 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 12:37:01 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 12:37:01 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 12:37:01 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 12:37:01 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 12:37:01 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 12:37:01 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 12:44:03 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 19312@OrdenadorPaule
+
+[2025-03-03 12:44:04 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 12:44:04 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 12:44:04 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 12:44:04 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 12:44:04 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 12:44:04 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 12:44:04 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 12:44:04 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 12:44:04 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 12:44:04 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 12:49:06 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 10276@OrdenadorPaule
+
+[2025-03-03 12:49:07 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 12:49:07 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 12:49:07 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 12:49:07 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 12:49:07 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 12:49:07 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 12:49:07 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 12:49:07 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 12:49:07 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 12:49:07 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 12:51:00 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 11372@OrdenadorPaule
+
+[2025-03-03 12:51:00 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 12:51:00 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 12:51:00 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 12:51:00 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 12:51:00 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 12:51:00 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 12:51:00 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 12:51:00 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 12:51:00 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 12:51:00 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:14:37 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 25628@OrdenadorPaule
+
+[2025-03-03 13:14:37 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:14:37 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:14:37 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:14:37 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:14:37 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:14:37 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:14:37 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:14:37 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:14:37 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:14:37 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:15:44 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 5072@OrdenadorPaule
+
+[2025-03-03 13:15:44 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:15:44 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:15:44 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:15:44 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:15:44 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:15:44 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:15:44 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:15:44 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:15:44 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:15:44 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:19:50 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 3404@OrdenadorPaule
+
+[2025-03-03 13:19:50 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:19:50 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:19:50 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:19:50 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:19:50 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:19:50 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:19:50 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:19:50 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:19:50 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:19:50 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:21:12 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 3488@OrdenadorPaule
+
+[2025-03-03 13:21:12 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:21:12 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:21:12 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:21:12 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:21:12 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:21:12 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:21:12 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:21:12 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:21:12 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:21:12 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:21:59 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 24328@OrdenadorPaule
+
+[2025-03-03 13:21:59 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:21:59 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:21:59 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:21:59 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:21:59 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:21:59 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:21:59 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:21:59 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:21:59 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:21:59 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:26:09 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 25184@OrdenadorPaule
+
+[2025-03-03 13:26:09 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:26:09 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:26:09 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:26:09 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:26:09 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:26:09 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:26:09 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:26:09 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:26:09 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:26:09 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:30:13 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 6500@OrdenadorPaule
+
+[2025-03-03 13:30:13 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:30:13 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:30:13 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:30:13 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:30:13 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:30:13 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:30:13 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:30:13 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:30:13 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:30:13 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:36:38 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 26440@OrdenadorPaule
+
+[2025-03-03 13:36:38 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:36:38 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:36:38 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:36:38 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:36:38 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:36:38 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:36:38 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:36:38 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:36:38 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:36:38 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:43:11 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 23832@OrdenadorPaule
+
+[2025-03-03 13:43:12 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:43:12 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:43:12 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:43:12 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:43:12 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:43:12 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:43:12 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:43:12 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:43:12 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:43:12 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:44:21 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 21612@OrdenadorPaule
+
+[2025-03-03 13:44:22 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:44:22 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:44:22 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:44:22 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:44:22 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:44:22 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:44:22 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:44:22 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:44:22 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:44:22 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:45:32 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 8972@OrdenadorPaule
+
+[2025-03-03 13:45:32 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:45:32 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:45:32 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:45:32 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:45:32 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:45:32 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:45:32 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:45:32 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:45:32 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:45:32 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 13:48:40 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 20388@OrdenadorPaule
+
+[2025-03-03 13:48:40 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 13:48:40 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 13:48:40 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 13:48:40 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 13:48:40 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 13:48:40 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 13:48:40 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 13:48:40 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 13:48:40 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 13:48:40 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 14:33:38 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 5804@OrdenadorPaule
+
+[2025-03-03 14:33:38 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 14:33:38 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 14:33:38 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 14:33:38 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 14:33:38 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 14:33:38 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 14:33:38 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 14:33:38 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 14:33:38 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 14:33:38 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 14:34:19 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 7428@OrdenadorPaule
+
+[2025-03-03 14:34:19 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 14:34:19 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 14:34:19 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 14:34:19 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 14:34:19 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 14:34:19 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 14:34:19 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 14:34:19 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 14:34:19 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 14:34:19 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 14:35:55 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 2028@OrdenadorPaule
+
+[2025-03-03 14:35:55 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 14:35:55 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 14:35:55 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 14:35:55 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 14:35:55 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 14:35:55 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 14:35:55 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 14:35:55 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 14:35:55 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 14:35:55 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 14:38:38 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 24980@OrdenadorPaule
+
+[2025-03-03 14:38:38 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 14:38:38 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 14:38:38 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 14:38:38 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 14:38:38 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 14:38:38 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 14:38:38 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 14:38:38 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 14:38:38 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 14:38:38 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 14:42:31 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 4184@OrdenadorPaule
+
+[2025-03-03 14:42:31 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 14:42:31 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 14:42:31 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 14:42:31 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 14:42:31 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 14:42:31 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 14:42:31 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 14:42:31 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 14:42:31 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 14:42:31 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 14:44:06 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 5952@OrdenadorPaule
+
+[2025-03-03 14:44:06 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 14:44:06 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 14:44:06 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 14:44:06 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 14:44:06 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 14:44:06 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 14:44:06 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 14:44:06 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 14:44:06 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 14:44:06 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 14:54:55 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 13148@OrdenadorPaule
+
+[2025-03-03 14:54:55 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 14:54:55 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 14:54:55 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 14:54:55 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 14:54:55 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 14:54:55 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 14:54:55 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 14:54:55 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 14:54:55 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 14:54:55 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 15:01:23 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 12040@OrdenadorPaule
+
+[2025-03-03 15:01:23 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 15:01:23 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 15:01:23 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 15:01:23 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 15:01:23 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 15:01:23 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 15:01:23 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 15:01:23 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 15:01:23 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 15:01:23 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 15:02:32 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 12312@OrdenadorPaule
+
+[2025-03-03 15:02:32 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 15:02:32 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 15:02:32 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 15:02:32 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 15:02:32 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 15:02:32 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 15:02:32 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 15:02:32 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 15:02:32 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 15:02:32 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 15:04:29 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 9100@OrdenadorPaule
+
+[2025-03-03 15:04:29 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 15:04:29 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 15:04:29 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 15:04:29 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 15:04:29 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 15:04:29 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 15:04:29 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 15:04:29 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 15:04:29 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 15:04:29 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 15:13:05 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 14616@OrdenadorPaule
+
+[2025-03-03 15:13:05 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 15:13:05 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 15:13:05 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 15:13:05 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 15:13:05 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 15:13:05 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 15:13:05 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 15:13:05 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 15:13:05 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 15:13:05 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 15:26:05 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 15896@OrdenadorPaule
+
+[2025-03-03 15:26:06 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 15:26:06 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 15:26:06 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 15:26:06 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 15:26:06 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 15:26:06 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 15:26:06 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 15:26:06 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 15:26:06 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 15:26:06 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 15:30:50 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 24364@OrdenadorPaule
+
+[2025-03-03 15:30:50 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 15:30:50 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 15:30:50 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 15:30:50 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 15:30:50 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 15:30:50 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 15:30:50 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 15:30:50 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 15:30:50 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 15:30:50 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-03-03 15:36:34 #1 store] 
+Database 'C:\Users\paule\Downloads\Rides24-master\src\main\resources\rides.temp' is opened by 13464@OrdenadorPaule
+
+[2025-03-03 15:36:34 #2 type.registry] 
+New type domain.Driver
+
+[2025-03-03 15:36:34 #3 type] 
+Type domain.Driver is not enhanced.
+
+[2025-03-03 15:36:34 #4 type.registry] 
+New type domain.Ride
+
+[2025-03-03 15:36:34 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-03-03 15:36:34 #6 type.registry] 
+New type domain.User
+
+[2025-03-03 15:36:34 #7 type] 
+Type domain.User is not enhanced.
+
+[2025-03-03 15:36:34 #8 type.registry] 
+New type domain.Booking
+
+[2025-03-03 15:36:34 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-03-03 15:36:34 #10 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2025-03-03 15:36:34 #11 type.registry] 
+New type java.util.Vector<domain.Ride>
+
