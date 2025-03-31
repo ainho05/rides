@@ -30,12 +30,14 @@ import exceptions.RideMustBeLaterThanTodayException;
  * It implements the data access to the objectDb database
  */
 public class DataAccess  {
-    private EntityManager db;
-    private EntityManagerFactory emf;
+    private  EntityManager db;
+    private static EntityManagerFactory emf;
     private ConfigXML c = ConfigXML.getInstance();
 
     public DataAccess() {
-        emf = Persistence.createEntityManagerFactory("objectdb:mydb.odb;drop");
+    	if (emf == null || !emf.isOpen()) {
+            emf = Persistence.createEntityManagerFactory("objectdb:mydb.odb;drop");
+        }
         db = emf.createEntityManager();
         open();
         // No llamamos a initializeDB aquí
@@ -54,10 +56,10 @@ public class DataAccess  {
 	 */	
 	public void initializeDB(){
 		
-		db.getTransaction().begin();
 
 		try {
-			
+			db.getTransaction().begin();
+
 		   Calendar today = Calendar.getInstance();
 		   
 		   int month=today.get(Calendar.MONTH);
@@ -90,9 +92,9 @@ public class DataAccess  {
 			User user3 = new User("user3@gmail.com", "u3","user3");
 
 	        // ✅ Reservar viajes para usuarios
-	        Booking booking1 = new Booking(user1, driver1.getRides().get(0)); 
-	        Booking booking2 = new Booking(user2, driver1.getRides().get(1));
-	        Booking booking3 = new Booking(user3, driver2.getRides().get(0));
+	        Booking booking1 = new Booking(user1, driver1.getRides().get(0),1); 
+	        Booking booking2 = new Booking(user2, driver1.getRides().get(1),1);
+	        Booking booking3 = new Booking(user3, driver2.getRides().get(0),2);
 			
 						
 			db.persist(driver1);
@@ -116,6 +118,7 @@ public class DataAccess  {
 			    db.getTransaction().rollback();
 			}
 			e.printStackTrace();
+			throw new RuntimeException("Error inicializando BD", e);
 		}
 	}
 	
@@ -171,6 +174,7 @@ public class DataAccess  {
 			Ride ride = driver.addRide(from, to, date, nPlaces, price);
 			//next instruction can be obviated
 			db.persist(driver); 
+			db.persist(ride);
 			db.getTransaction().commit();
 
 			return ride;
@@ -258,10 +262,13 @@ public void open(){
 	    if (db != null && db.isOpen()) {
 	        db.close();
 	    }
-	    if (emf != null) {
-	        emf.close();
-	    }
+	   
 	}
+	 public static void closeFactory() {
+	        if (emf != null && emf.isOpen()) {
+	            emf.close();
+	        }
+	    }
 
 	
 	// IT 1

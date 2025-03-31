@@ -20,7 +20,9 @@ public class UtilDate {
 	}
 	
 	public static Date newDate(int year,int month,int day) {
-
+		if (month < 0 || month > 11) { 
+	        throw new IllegalArgumentException("Debe ser 0-11 (0=enero, 11=diciembre)");
+	    }
 	     Calendar calendar = Calendar.getInstance();
 		 calendar.setTimeZone(TimeZone.getTimeZone("CET"));
 	     calendar.set(year, month, day,0,0,0);

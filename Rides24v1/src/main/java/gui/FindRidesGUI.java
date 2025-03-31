@@ -53,7 +53,11 @@ public class FindRidesGUI extends JFrame {
 			ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.NPlaces"), 
 			ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.Price")
 	};
-	
+
+	private JRadioButton buttonOrdenarPrecio;
+
+	private JRadioButton buttonOrdenarAsiento;
+	private ButtonGroup grupoOrden;
 	
 
 
@@ -193,6 +197,8 @@ public class FindRidesGUI extends JFrame {
 							row.add(ride); // ev object added in order to obtain it with tableModelEvents.getValueAt(i,3)
 							tableModelRides.addRow(row);		
 						}
+			            actualizarTablaConOrdenActual();
+
 						datesWithRidesCurrentMonth=facade.getThisMonthDatesWithRides((String)jComboBoxOrigin.getSelectedItem(),(String)jComboBoxDestination.getSelectedItem(),jCalendar1.getDate());
 						paintDaysWithEvents(jCalendar1,datesWithRidesCurrentMonth,Color.CYAN);
 
@@ -272,7 +278,39 @@ public class FindRidesGUI extends JFrame {
 
 		// Agregar el botón a la interfaz
 		this.getContentPane().add(btnRequestBooking);
+		
+		buttonOrdenarPrecio = new JRadioButton("Ordenar viajes por precio");
+		buttonOrdenarPrecio.setBounds(150, 206, 172, 21);
+		getContentPane().add(buttonOrdenarPrecio);
+		
+		buttonOrdenarAsiento = new JRadioButton("Ordenar viajes por asientos");
+		buttonOrdenarAsiento.setBounds(341, 206, 195, 21);
+		getContentPane().add(buttonOrdenarAsiento);
 
+		grupoOrden = new ButtonGroup();
+		grupoOrden.add(buttonOrdenarPrecio);
+		grupoOrden.add(buttonOrdenarAsiento);
+		
+		buttonOrdenarPrecio.addActionListener(e -> {
+		    if (buttonOrdenarPrecio.isSelected()) {
+		        ordenarTablaPorPrecio();
+		    }else {
+		        // Si se deselecciona, simplemente quitar el orden
+		        tableModelRides.fireTableDataChanged(); // Refrescar sin ordenar
+		        buttonOrdenarPrecio.setForeground(Color.BLACK);
+		    }
+		    
+		});
+
+		buttonOrdenarAsiento.addActionListener(e -> {
+		    if (buttonOrdenarAsiento.isSelected()) {
+		        ordenarTablaPorAsientos();
+		    }else {
+		        // Si se deselecciona, simplemente quitar el orden
+		        tableModelRides.fireTableDataChanged(); // Refrescar sin ordenar
+		        buttonOrdenarAsiento.setForeground(Color.BLACK);
+		    }
+		});
 	}
 	public static void paintDaysWithEvents(JCalendar jCalendar,List<Date> datesWithEventsCurrentMonth, Color color) {
 		//		// For each day with events in current month, the background color for that day is changed to cyan.
@@ -320,5 +358,54 @@ public class FindRidesGUI extends JFrame {
 	private void jButton2_actionPerformed(ActionEvent e) {
 		this.setVisible(false);
 	}
+		
+	private void ordenarTablaPorPrecio() {
+	    ordenarTabla(Comparator.comparing(Ride::getPrice));
+	    buttonOrdenarPrecio.setForeground(Color.BLUE); // Resaltar el botón activo
+	    buttonOrdenarAsiento.setForeground(Color.BLACK);
+	}
 
+	private void ordenarTablaPorAsientos() {
+	    ordenarTabla(Comparator.comparing(Ride::getnPlaces).reversed());
+	    buttonOrdenarAsiento.setForeground(Color.BLUE); // Resaltar el botón activo
+	    buttonOrdenarPrecio.setForeground(Color.BLACK);
+	}
+
+	private void ordenarTabla(Comparator<Ride> comparador) {
+	    // Obtener los datos actuales de la tabla
+	    List<Ride> rides = new ArrayList<>();
+	    for (int i = 0; i < tableModelRides.getRowCount(); i++) {
+	        rides.add((Ride) tableModelRides.getValueAt(i, 3));
+	    }
+	    
+	    // Ordenar según el criterio
+	    rides.sort(comparador);
+	    
+	    // Actualizar la tabla
+	    tableModelRides.setRowCount(0);
+	    for (Ride ride : rides) {
+	        Vector<Object> row = new Vector<>();
+	        row.add(ride.getDriver().getName());
+	        row.add(ride.getnPlaces());
+	        row.add(ride.getPrice());
+	        row.add(ride);
+	        tableModelRides.addRow(row);
+	    }
+	    
+	    // Mantener la selección si había alguna
+	    if (tableRides.getSelectedRow() != -1) {
+	        int selectedRow = tableRides.getSelectedRow();
+	        tableRides.setRowSelectionInterval(selectedRow, selectedRow);
+	    }
+	}
+	private void actualizarTablaConOrdenActual() {
+	    if (buttonOrdenarPrecio.isSelected()) {
+	        ordenarTablaPorPrecio();
+	    } else if (buttonOrdenarAsiento.isSelected()) {
+	        ordenarTablaPorAsientos();
+	    } else {
+	        // Ningún botón seleccionado, solo refrescar
+	        tableModelRides.fireTableDataChanged();
+	    }
+	}
 }

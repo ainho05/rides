@@ -15,7 +15,10 @@ public class User {
     public User() {}
 
     public User(String username, String email, String password) {
-        this.username = username;
+    	if (email == null || !email.contains("@")) {
+            throw new IllegalArgumentException("Email inválido");
+        }
+    	this.username = username;
         this.password = password;
         this.email = email;
     }

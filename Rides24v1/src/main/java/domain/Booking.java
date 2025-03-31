@@ -16,12 +16,17 @@ public class Booking implements Serializable {
     private Ride ride;
     
     private boolean confirmed;
+    private int numSeats;
 
     public Booking() {}
 
-    public Booking(User user, Ride ride) {
-        this.user = user;
+    public Booking(User user, Ride ride, int numSeats) {
+    	if (user == null || ride == null) {
+            throw new IllegalArgumentException("User/Ride no pueden ser null");
+        }
+    	this.user = user;
         this.ride = ride;
+        this.numSeats=numSeats;
     }
 
     public User getUser() { return user; }
@@ -37,5 +42,8 @@ public class Booking implements Serializable {
 
 	public boolean isConfirmed() {
 		return confirmed;
+	}
+	public int getNumSeats() {
+		return numSeats;
 	}
 }

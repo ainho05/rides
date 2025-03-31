@@ -51,11 +51,14 @@ public class CreateRideGUI extends JFrame {
 	private JLabel jLabelError = new JLabel();
 	
 	private List<Date> datesWithEventsCurrentMonth;
-
+	private String driverEmail;
 
 	public CreateRideGUI(Driver driver) {
-
+		 if (driver == null) {
+		        throw new IllegalArgumentException("Driver cannot be null");
+		    }
 		this.driver=driver;
+		this.driverEmail=driver.getEmail();
 		this.getContentPane().setLayout(null);
 		this.setSize(new Dimension(604, 370));
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.CreateRide"));
@@ -168,9 +171,14 @@ public class CreateRideGUI extends JFrame {
 	private void jButtonCreate_actionPerformed(ActionEvent e) {
 		jLabelMsg.setText("");
 		String error=field_Errors();
+		
 		if (error!=null) 
 			jLabelMsg.setText(error);
 		else
+			 if (driverEmail == null || driverEmail.isEmpty()) {
+		            jLabelMsg.setText("You must be logged in as a driver to create rides");
+		            return;
+		        }
 			try {
 				BLFacade facade = MainGUI.getBusinessLogic();
 				int inputSeats = Integer.parseInt(jTextFieldSeats.getText());
@@ -178,7 +186,7 @@ public class CreateRideGUI extends JFrame {
 
 				Ride r=facade.createRide(fieldOrigin.getText(), fieldDestination.getText(), UtilDate.trim(jCalendar.getDate()), inputSeats, price, driver.getEmail());
 				jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.RideCreated"));
-
+				
 			} catch (RideMustBeLaterThanTodayException e1) {
 				// TODO Auto-generated catch block
 				jLabelMsg.setText(e1.getMessage());

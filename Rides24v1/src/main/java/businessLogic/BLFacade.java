@@ -85,7 +85,7 @@ public interface BLFacade  {
 	// para que una Driver cree un viaje
 	boolean createRide(String driverEmail, String origin, String destination, Date date, int nPlaces, float price);
 	// para que una User (pasajera) reserve un viaje existente
-	boolean requestBooking(String passengerEmail, int rideId);
+	boolean requestBooking(String passengerEmail, int rideId, int numSeats);
 	// devuelve los viajes que aún tengan asientos disponibles
 	List<Ride> getAllAvailableRides();
 	boolean isDriver(String email);
@@ -93,7 +93,8 @@ public interface BLFacade  {
 	@WebMethod boolean acceptBookingRequest(String driverEmail, String passengerEmail);
 	@WebMethod boolean rejectBookingRequest(String driverEmail, String passengerEmail);
 
-
+	@WebMethod
+	Driver getDriver(String email);
 	
 	
 	

@@ -21,13 +21,14 @@ import exceptions.RideAlreadyExistException;
  */
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation  implements BLFacade {
-	DataAccess dbManager;
+	private DataAccess dbManager;
+	private final RideValidator rideValidator;
+	
 
 	public BLFacadeImplementation()  {		
 		System.out.println("Creating BLFacadeImplementation instance");
-		
-		
-		    dbManager=new DataAccess();
+		this.dbManager=new DataAccess();
+		this.rideValidator = new RideValidator();
 		    
 		//dbManager.close();
 
@@ -38,7 +39,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 		System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
 		ConfigXML c=ConfigXML.getInstance();
-		
+		this.rideValidator = new RideValidator();
 		dbManager=da;		
 	}
     
@@ -72,11 +73,19 @@ public class BLFacadeImplementation  implements BLFacade {
 	/**
 	 * {@inheritDoc}
 	 */
-   @WebMethod
+   @Override
+	@WebMethod
    public Ride createRide( String from, String to, Date date, int nPlaces, float price, String driverEmail ) throws RideMustBeLaterThanTodayException, RideAlreadyExistException{
-	   
+	   	rideValidator.validateRideDate(date);
 		dbManager.open();
-		Ride ride=dbManager.createRide(from, to, date, nPlaces, price, driverEmail);		
+		
+		Driver driver = dbManager.getDriver(driverEmail);
+	    if (driver == null) {
+	        dbManager.close();
+	        throw new RideAlreadyExistException("Driver not found");
+	    }
+	    
+		Ride ride=dbManager.createRide(from, to, date, nPlaces, price, driver.getEmail());		
 		dbManager.close();
 		return ride;
    };
@@ -157,7 +166,7 @@ public class BLFacadeImplementation  implements BLFacade {
     }
 
     @Override
-    public boolean requestBooking(String passengerEmail, int rideId) {
+    public boolean requestBooking(String passengerEmail, int rideId,int numSeats) {
         User passenger = dbManager.getUser(passengerEmail);
         if (passenger == null) return false; // El usuario no está registrado
 
@@ -165,16 +174,16 @@ public class BLFacadeImplementation  implements BLFacade {
         if (ride == null) return false; // El viaje no existe
 
         // Verificar si hay asientos disponibles
-        if (ride.getAvailableSeats() <= 0) return false; 
+        if (ride.getAvailableSeats() <= numSeats) return false; 
 
         // Crear la reserva
-        Booking booking = new Booking(passenger, ride);
+        Booking booking = new Booking(passenger, ride,numSeats);
         
         // Guardar la reserva en la base de datos
         boolean success = dbManager.saveBooking(booking);
         
         if (success) {
-            if (ride.decreaseAvailableSeats()) // Reducir número de asientos disponibles
+            if (ride.decreaseAvailableSeats(numSeats)) // Reducir número de asientos disponibles
             	dbManager.updateRide(ride); // Guardar cambios en el viaje
             else // no hay sitios avai
             	success = false;
@@ -212,7 +221,7 @@ public class BLFacadeImplementation  implements BLFacade {
         }
 
         Ride ride = booking.getRide();
-        if (ride.getAvailableSeats() <= 0) {
+        if (ride.getAvailableSeats() <= booking.getNumSeats()) {
             dbManager.close();
             return false; // No hay asientos disponibles
         }
@@ -222,7 +231,7 @@ public class BLFacadeImplementation  implements BLFacade {
         boolean success = dbManager.updateBooking(booking);
 
         if (success) {
-            ride.decreaseAvailableSeats();
+            ride.decreaseAvailableSeats(booking.getNumSeats());
             dbManager.updateRide(ride);
         }
 
@@ -249,7 +258,14 @@ public class BLFacadeImplementation  implements BLFacade {
         return success;
     }
 
-
+    @Override
+    @WebMethod
+    public Driver getDriver(String email) {
+        dbManager.open();
+        Driver driver = dbManager.getDriver(email);
+        dbManager.close();
+        return driver;
+    }
     
 
 

@@ -53,12 +53,17 @@ public class LoginGUI extends JFrame {
                 }
 
                 if (facade.login(email, password)) {
-                    JOptionPane.showMessageDialog(null, "Login Successful");
+                	boolean isDriver = facade.isDriver(email);
+                	
+                    String userType = isDriver ? "Driver" : "User";
+
+                	JOptionPane.showMessageDialog(null, "Login Successful");
 
                     // 🔹 Ahora podemos guardar el usuario en MainGUI
                     if (mainGUI != null) {
                         mainGUI.setLoggedInUserEmail(email);
                         System.out.println("✅ Usuario guardado en MainGUI: " + email);
+
                     } else {
                         System.out.println("❌ No se pudo guardar el usuario en MainGUI");
                     }

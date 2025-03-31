@@ -26,6 +26,8 @@ public class Ride implements Serializable {
 	private Date date;
 	private float price;
 	
+    @ManyToOne
+    @JoinColumn(name = "driver_email", referencedColumnName = "email")//nuevo
 	private Driver driver;  
 	
 	public Ride(){
@@ -190,9 +192,9 @@ public class Ride implements Serializable {
 		return nPlaces;
 	}
 	
-	public boolean decreaseAvailableSeats() {
-		if (this.nPlaces > 0) {
-			this.nPlaces--;
+	public boolean decreaseAvailableSeats(int numSeats) {
+		if (this.nPlaces >= numSeats) {
+			this.nPlaces= this.nPlaces-numSeats;
 			return true;
 		}
 		return false;

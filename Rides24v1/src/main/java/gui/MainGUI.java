@@ -9,6 +9,7 @@ import javax.swing.*;
 
 import domain.Driver;
 import businessLogic.BLFacade;
+import dataAccess.DataAccess;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -59,10 +60,16 @@ public class MainGUI extends JFrame {
 	/**
 	 * This is the default constructor
 	 */
-	public MainGUI(Driver d) {
+	public MainGUI() {
 		super();
-
-		driver=d;
+	    Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+	        if (appFacadeInterface != null) {
+	           DataAccess.closeFactory();
+	          
+	        }
+	        System.out.println("EntityManagerFactory cerrado correctamente");
+	    }));
+		//driver=d;
 		
 		// this.setSize(271, 295);
 		this.setSize(495, 290);
@@ -108,9 +115,29 @@ public class MainGUI extends JFrame {
 		// Botón para crear viaje (solo Drivers)
 		jButtonCreateQuery = new JButton();
 		jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.CreateRide"));
+		
 		jButtonCreateQuery.addActionListener(new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
-				JFrame a = new CreateRideGUI(driver);
+				BLFacade facade = MainGUI.getBusinessLogic();
+		        
+		        // Verificar si el usuario actual es un conductor
+		        if (loggedInUserEmail == null || !facade.isDriver(loggedInUserEmail)) {
+		            JOptionPane.showMessageDialog(MainGUI.this, 
+		                "You must be logged in as a driver to create rides", 
+		                "Error", JOptionPane.ERROR_MESSAGE);
+		            return;
+		        }
+		        
+		        // Obtener el conductor actual desde la base de datos
+		        Driver currentDriver = facade.getDriver(loggedInUserEmail);
+		        if (currentDriver == null) {
+		            JOptionPane.showMessageDialog(MainGUI.this, 
+		                "Driver data not found", 
+		                "Error", JOptionPane.ERROR_MESSAGE);
+		            return;
+		        }
+				
+				JFrame a = new CreateRideGUI(currentDriver);
 				a.setVisible(true);
 			}
 		});
@@ -144,7 +171,7 @@ public class MainGUI extends JFrame {
 		
 		
 		setContentPane(jContentPane);
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.MainTitle") + " - driver :"+driver.getName());
+		setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.MainTitle") + "PestañaPrincipal");
 		
 		addWindowListener(new WindowAdapter() {
 			@Override

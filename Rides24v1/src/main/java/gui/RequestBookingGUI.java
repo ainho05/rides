@@ -15,7 +15,8 @@ public class RequestBookingGUI extends JFrame {
     private DefaultTableModel tableModel;
     private String passengerEmail;
     private BLFacade facade;
-
+    private JComboBox<Integer> comboBox;
+    
     public RequestBookingGUI(String passengerEmail, Ride selectedRide) {
         this.passengerEmail = passengerEmail;
         this.facade = MainGUI.getBusinessLogic();
@@ -36,7 +37,18 @@ public class RequestBookingGUI extends JFrame {
         rideInfoPanel.add(new JLabel("Available Seats: " + selectedRide.getAvailableSeats()));
         rideInfoPanel.add(new JLabel("Price: " + selectedRide.getPrice()));
 
-        add(rideInfoPanel, BorderLayout.CENTER);
+        getContentPane().add(rideInfoPanel, BorderLayout.CENTER);
+        //IT2- opcion para poder reservar más de un asiento
+        int avaliableSeats= selectedRide.getAvailableSeats();
+        //como máximo se podrán comprar 5 seats
+        Integer[] seatNumbers =new Integer[Math.min(avaliableSeats, 5)];
+        for(int i=0;i<seatNumbers.length;i++) {
+        	seatNumbers[i]=i+1;
+        }
+        comboBox =new JComboBox<>(seatNumbers);
+        comboBox.setMaximumRowCount(5);
+        rideInfoPanel.add(comboBox);
+        
 
         // Botón para confirmar la reserva
         JPanel buttonPanel = new JPanel();
@@ -52,7 +64,8 @@ public class RequestBookingGUI extends JFrame {
         		"Not Logged In", JOptionPane.WARNING_MESSAGE);
         		 return;
         		 }
-            boolean resquestSent = facade.requestBooking(passengerEmail, selectedRide.getRideNumber());
+            int numSeats=(Integer) comboBox.getSelectedItem();
+        	boolean resquestSent = facade.requestBooking(passengerEmail, selectedRide.getRideNumber(),numSeats);
             if (resquestSent) {
                 JOptionPane.showMessageDialog(this, "Booking request sent! Wait for driver approval");
                 dispose(); // Cierra la ventana después de reservar
@@ -92,7 +105,8 @@ public class RequestBookingGUI extends JFrame {
         }
 
         int rideId = (int) tableModel.getValueAt(selectedRow, 0);
-        boolean success = facade.requestBooking(passengerEmail, rideId);
+        int numSeats=(Integer) comboBox.getSelectedItem();
+        boolean success = facade.requestBooking(passengerEmail, rideId,numSeats);
 
         if (success) {
             JOptionPane.showMessageDialog(this, "Ride reserved successfully!");

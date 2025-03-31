@@ -1,6 +1,7 @@
 package configuration;
 
 import java.io.File;
+import java.io.InputStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,8 +16,7 @@ import org.w3c.dom.NodeList;
  */
 public class ConfigXML {
 	
-	private String configFile = "src/main/resources/config.xml";
-		
+	private String configFile = getClass().getClassLoader().getResource("config.xml").getFile();		
 	private String businessLogicNode;
 
 	private String businessLogicPort;
@@ -73,7 +73,7 @@ public class ConfigXML {
 
 	private ConfigXML(){
 		
-		  try {
+		  try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.xml")){
 			  DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			  DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			  Document doc = dBuilder.parse(new File(configFile));
@@ -85,7 +85,7 @@ public class ConfigXML {
 			  
 				//Two possible values: true (no instance of RemoteServer needs to be launched) or false (RemoteServer needs to be run first)
 			  String value= ((Element)config.getElementsByTagName("businessLogic").item(0)).getAttribute("local");
-			  businessLogicLocal=value.equals("true");
+			  businessLogicLocal = "true".equalsIgnoreCase(value);
 
 			  businessLogicNode = getTagValue("businessLogicNode", config);
 

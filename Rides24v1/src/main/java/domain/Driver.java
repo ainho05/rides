@@ -26,7 +26,8 @@ public class Driver implements Serializable {
 	private String name;
 	private String password;
 	@XmlIDREF
-	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+	//@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+	@OneToMany(mappedBy = "driver", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Ride> rides=new Vector<Ride>();
 
 	public Driver() {
@@ -49,6 +50,9 @@ public class Driver implements Serializable {
 	}
 
 	public void setEmail(String email) {
+		if (email == null || !email.contains("@")) {
+	           throw new IllegalArgumentException("Email inválido");
+	    }
 		this.email = email;
 	}
 
@@ -93,7 +97,10 @@ public class Driver implements Serializable {
 	 */
 	public boolean doesRideExists(String from, String to, Date date)  {	
 		for (Ride r:rides)
-			if ( (java.util.Objects.equals(r.getFrom(),from)) && (java.util.Objects.equals(r.getTo(),to)) && (java.util.Objects.equals(r.getDate(),date)) )
+			if ( (java.util.Objects.equals(r.getFrom(),from)) && 
+				 (java.util.Objects.equals(r.getTo(),to)) && 
+				 (java.util.Objects.equals(r.getDate(),date))&&
+				 (this.equals(r.getDriver())))
 			 return true;
 		
 		return false;
