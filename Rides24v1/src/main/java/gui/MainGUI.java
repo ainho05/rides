@@ -9,6 +9,7 @@ import javax.swing.*;
 
 import domain.Driver;
 import businessLogic.BLFacade;
+import businessLogic.BLFacadeImplementation;
 import dataAccess.DataAccess;
 
 import java.awt.BorderLayout;
@@ -56,6 +57,7 @@ public class MainGUI extends JFrame {
 	private JRadioButton rdbtnNewRadioButton_2;
 	private JPanel panel;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private  JButton btnLeaveReview;
 	
 	/**
 	 * This is the default constructor
@@ -212,6 +214,31 @@ public class MainGUI extends JFrame {
 			} 
         });
         jButtonViewBookings.setVisible(false);
+        
+		// IT2 -> CU: Reviews
+        btnLeaveReview = new JButton("Leave a Review");
+        btnLeaveReview.addActionListener(e -> {
+            if (loggedInUserEmail == null || loggedInUserEmail.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "You must be logged in to leave a review", "Not Logged In", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+         // Verificar si el usuario ha completado algún viaje
+            BLFacade blFacade = new BLFacadeImplementation();
+            if (!blFacade.hasPassengerTraveled(loggedInUserEmail)) {
+                JOptionPane.showMessageDialog(this, "You have not completed any trips and cannot leave a review.", "No Completed Trips", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            
+            JFrame reviewFrame = new ReviewGUI(loggedInUserEmail);
+            reviewFrame.setVisible(true);
+        });
+        // Añadir el botón al panel o al contenedor adecuado
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.add(btnLeaveReview);
+
+        // Añadir el panel con el botón a la ventana
+        jContentPane.add(buttonPanel, BorderLayout.SOUTH);
 		
         /*// botón para solicitar viaje (Usuarios)
 		jButtonRequestBooking = new JButton("Request a Ride");
@@ -241,6 +268,8 @@ public class MainGUI extends JFrame {
         panelActions.add(jButtonViewBookings);
         //panelActions.add(jButtonRequestBooking);
         jContentPane.add(panelActions, BorderLayout.SOUTH);
+        
+        panelActions.add(btnLeaveReview);
 
         setContentPane(jContentPane);
 

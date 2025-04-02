@@ -114,4 +114,3 @@ public class RegisterGUI extends JFrame {
 
     }
 }
-

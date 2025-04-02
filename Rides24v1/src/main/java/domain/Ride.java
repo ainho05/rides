@@ -25,7 +25,9 @@ public class Ride implements Serializable {
 	private int nPlaces;
 	private Date date;
 	private float price;
-	
+    @ManyToOne
+	private User passenger;  // Relación con el pasajero
+
     @ManyToOne
     @JoinColumn(name = "driver_email", referencedColumnName = "email")//nuevo
 	private Driver driver;  
@@ -75,7 +77,7 @@ public class Ride implements Serializable {
 	public void setRideNumber(Integer rideNumber) {
 		this.rideNumber = rideNumber;
 	}
-
+	
 
 	/**
 	 * Get the origin  of the ride
@@ -182,7 +184,9 @@ public class Ride implements Serializable {
 		this.price = price;
 	}
 
-
+	public void setPassenger(User passenger) {
+		this.passenger=passenger;
+	}
 
 	public String toString(){
 		return rideNumber+";"+";"+from+";"+to+";"+date;  

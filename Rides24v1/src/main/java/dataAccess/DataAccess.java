@@ -21,6 +21,7 @@ import configuration.ConfigXML;
 import configuration.UtilDate;
 import domain.Booking;
 import domain.Driver;
+import domain.Review;
 import domain.Ride;
 import domain.User;
 import exceptions.RideAlreadyExistException;
@@ -55,10 +56,16 @@ public class DataAccess  {
 	 * This method is invoked by the business logic (constructor of BLFacadeImplementation) when the option "initialize" is declared in the tag dataBaseOpenMode of resources/config.xml file
 	 */	
 	public void initializeDB(){
+		db.getTransaction().begin();
 		
+		db.createQuery("DELETE FROM Driver").executeUpdate();
+		db.createQuery("DELETE FROM User").executeUpdate();
+		db.createQuery("DELETE FROM Ride").executeUpdate();
+		db.createQuery("DELETE FROM Booking").executeUpdate();
+		db.createQuery("DELETE FROM Review").executeUpdate();
 
 		try {
-			db.getTransaction().begin();
+			//db.getTransaction().begin();
 
 		   Calendar today = Calendar.getInstance();
 		   
@@ -96,7 +103,45 @@ public class DataAccess  {
 	        Booking booking2 = new Booking(user2, driver1.getRides().get(1),1);
 	        Booking booking3 = new Booking(user3, driver2.getRides().get(0),2);
 			
-						
+			
+	     // IT2: crear viajes con fechas pasdas (para poder hacer reviews)
+	        Ride ride1 = driver1.addRide("Donostia2", "Bilbo2", UtilDate.newDate(year -1, month - 1, 15), 4, 7);
+	        ride1.setPassenger(user1);
+	        System.out.println("Ride1 creado: " + ride1);
+
+	        Ride ride2 = driver1.addRide("Donostia2", "Gazteiz2", UtilDate.newDate(year -1, month - 2, 6), 4, 8);
+	        //ride2.setPassenger(user2);
+
+	        Ride ride3 = driver1.addRide("Bilbo2", "Donostia2", UtilDate.newDate(year -1, month - 3, 25), 4, 4);
+	        //ride3.setPassenger(user3);
+
+	        Ride ride4 = driver1.addRide("Donostia2", "Iruña2", UtilDate.newDate(year-1, month - 4, 7), 4, 8);
+	        ride4.setPassenger(user1);
+
+	        Ride ride5 = driver2.addRide("Donostia2", "Bilbo2", UtilDate.newDate(year-1, month - 1, 15), 3, 3);
+	        ride5.setPassenger(user2);
+
+	        Ride ride6 = driver2.addRide("Bilbo2", "Donostia2", UtilDate.newDate(year-1, month - 2, 25), 2, 5);
+	        //ride6.setPassenger(user3);
+
+	        Ride ride7 = driver2.addRide("Eibar2", "Gasteiz2", UtilDate.newDate(year-1, month - 3, 6), 2, 5);
+	        ride7.setPassenger(user1);
+
+	        Ride ride8 = driver3.addRide("Bilbo", "Donostia", UtilDate.newDate(year-1, month - 1, 14), 1, 3);
+	        ride8.setPassenger(user2);
+	        
+	        // Persisitir los viajes
+	        System.out.println("Persistiendo ride1: " + ride1);
+	        db.persist(ride1);
+	        System.out.println("Persistiendo ride2: " + ride2);
+	        db.persist(ride2);
+	        db.persist(ride3);
+	        db.persist(ride4);
+	        db.persist(ride5);
+	        db.persist(ride6);
+	        db.persist(ride7);
+	        db.persist(ride8);
+	        
 			db.persist(driver1);
 			db.persist(driver2);
 			db.persist(driver3);
@@ -493,9 +538,66 @@ public void open(){
         return user != null;
     }
 
+public boolean hasPassengerTraveledWithDriver(String passengerEmail, String driverEmail) {
+	    
+	    String queryStr = "SELECT COUNT(r) FROM Ride r WHERE r.passenger.email = :passengerEmail AND r.driver.email = :driverEmail AND r.date < CURRENT_DATE";
+	    TypedQuery<Long> query = db.createQuery(queryStr, Long.class);
+	    query.setParameter("passengerEmail", passengerEmail);
+	    query.setParameter("driverEmail", driverEmail);
+	    Long count = query.getSingleResult();
+	    return count > 0;
+    }
+
+	/**
+	 * Método para verificar que una pasajera ha realizado algún viaje completado
+	 * @param passengerEmail
+	 * @return
+	 */
+	public boolean hasPassengerTraveled(String passengerEmail) {
+	    String queryStr = "SELECT COUNT(r) FROM Ride r WHERE r.passenger.email = :passengerEmail AND r.date < CURRENT_DATE";
+	    TypedQuery<Long> query = db.createQuery(queryStr, Long.class);
+	    query.setParameter("passengerEmail", passengerEmail);
+	    Long count = query.getSingleResult();
+	    
+		// lo siguiente se hace para saber cuántos viajes ha hecho esa passenger, y poder verificar que funciona bien lo de las reseñas 
+		// (poder hacer únicamente reseñas a drivers con las que ha viajado
+	    String debugQueryStr = "SELECT r FROM Ride r WHERE r.passenger.email = :passengerEmail AND r.date < CURRENT_DATE";
+	    TypedQuery<Ride> debugQuery = db.createQuery(debugQueryStr, Ride.class);
+	    debugQuery.setParameter("passengerEmail", passengerEmail);
+	    List<Ride> rides = debugQuery.getResultList();
+	    System.out.println("Rides found for passenger " + passengerEmail + ": " + rides.size());
+	    for (Ride ride : rides) {
+	        System.out.println("Ride: " + ride.getFrom() + " to " + ride.getTo() + " on " + ride.getDate());
+	    }
+	    
+	    return count > 0;
+	}
 	
+    public void saveReview(Review review) {
+    	
+    	String passengerEmail = review.getPassengerEmail();
+        String driverEmail = review.getDriverEmail();
+        
+        if (!hasPassengerTraveledWithDriver(passengerEmail, driverEmail)) {
+            throw new IllegalStateException("El usuario no ha realizado ningún viaje con este conductor y no puede dejar una reseña.");
+        }
+    	
+        db.getTransaction().begin();
+        db.persist(review);
+        db.getTransaction().commit();
+    }
+
+    public List<Driver> getDriversForPassenger(String passengerEmail) {
+    	
+    	String queryStr = "SELECT DISTINCT r.driver FROM Ride r WHERE r.passenger.email = :passengerEmail AND r.date < CURRENT_DATE";
+    	TypedQuery<Driver> query = db.createQuery(queryStr, Driver.class);
+    	query.setParameter("passengerEmail", passengerEmail);
+    	List<Driver> drivers = query.getResultList();
+        
+        return drivers;
 
 
+    }
 
 
 

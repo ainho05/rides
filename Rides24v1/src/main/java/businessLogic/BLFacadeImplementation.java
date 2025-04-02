@@ -13,6 +13,7 @@ import domain.Ride;
 import domain.User;
 import domain.Booking;
 import domain.Driver;
+import domain.Review;
 import exceptions.RideMustBeLaterThanTodayException;
 import exceptions.RideAlreadyExistException;
 
@@ -268,6 +269,26 @@ public class BLFacadeImplementation  implements BLFacade {
     }
     
 
+	@Override
+    public boolean hasPassengerTraveledWithDriver(String passengerEmail, String driverEmail) {
+    	return dbManager.hasPassengerTraveledWithDriver(passengerEmail, driverEmail);
+    }
+    
+    @Override
+    public void submitReview(Review review) {
+        // Implementa la lógica para guardar la reseña en la base de datos
+    	dbManager.saveReview(review);
+    }
+    
+    @Override
+    public List<Driver> getDriversForPassenger(String passengerEmail) {
+        return dbManager.getDriversForPassenger(passengerEmail);
+    }
+    
+    @Override
+    public boolean hasPassengerTraveled(String passengerEmail) {
+        return dbManager.hasPassengerTraveled(passengerEmail);
+    }
 
 
 

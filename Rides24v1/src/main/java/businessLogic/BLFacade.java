@@ -7,6 +7,7 @@ import java.util.List;
 import domain.Ride;
 import domain.Booking;
 import domain.Driver;
+import domain.Review;
 import exceptions.RideMustBeLaterThanTodayException;
 import exceptions.RideAlreadyExistException;
 
@@ -96,6 +97,11 @@ public interface BLFacade  {
 	@WebMethod
 	Driver getDriver(String email);
 	
-	
+	boolean hasPassengerTraveledWithDriver(String passengerEmail,
+			String driverEmail);
+			void submitReview(Review review);
+			List<Driver> getDriversForPassenger(String passengerEmail);
+			boolean hasPassengerTraveled(String passengerEmail);
+
 	
 }
