@@ -62,10 +62,15 @@ public class DataAccess  {
 		db.createQuery("DELETE FROM User").executeUpdate();
 		db.createQuery("DELETE FROM Ride").executeUpdate();
 		db.createQuery("DELETE FROM Booking").executeUpdate();
-		db.createQuery("DELETE FROM Review").executeUpdate();
+		//db.createQuery("DELETE FROM Review").executeUpdate();
 
 		try {
 			//db.getTransaction().begin();
+	        
+			
+	        // Verifica que las tablas estén vacías
+	        System.out.println("Conductores existentes: " + 
+	            db.createQuery("SELECT COUNT(d) FROM Driver d").getSingleResult());
 
 		   Calendar today = Calendar.getInstance();
 		   
@@ -89,14 +94,14 @@ public class DataAccess  {
 			
 			driver2.addRide("Donostia", "Bilbo", UtilDate.newDate(year,month,15), 3, 3);
 			driver2.addRide("Bilbo", "Donostia", UtilDate.newDate(year,month,25), 2, 5);
-			driver2.addRide("Eibar", "Gasteiz", UtilDate.newDate(year,month,6), 2, 5);
+			driver2.addRide("Eibar", "Gasteiz", UtilDate.newDate(year,month,6), 10, 5);
 
 			driver3.addRide("Bilbo", "Donostia", UtilDate.newDate(year,month,14), 1, 3);
 			
 			// IT 1 (crear usuarios pasajeros y reservar viajes para usuarios)
-			User user1 = new User("user1@gmail.com", "u1","user1");
-			User user2 = new User("user2@gmail.com" , "u2","user2");
-			User user3 = new User("user3@gmail.com", "u3","user3");
+			User user1 = new User( "user1","user1@gmail.com","u1");
+			User user2 = new User("user2","user2@gmail.com","u2");
+			User user3 = new User("user3","user3@gmail.com","u");
 
 	        // ✅ Reservar viajes para usuarios
 	        Booking booking1 = new Booking(user1, driver1.getRides().get(0),1); 
@@ -105,23 +110,19 @@ public class DataAccess  {
 			
 			
 	     // IT2: crear viajes con fechas pasdas (para poder hacer reviews)
-	        Ride ride1 = driver1.addRide("Donostia2", "Bilbo2", UtilDate.newDate(year -1, month - 1, 15), 4, 7);
-	        ride1.setPassenger(user1);
-	        System.out.println("Ride1 creado: " + ride1);
-
-	        Ride ride2 = driver1.addRide("Donostia2", "Gazteiz2", UtilDate.newDate(year -1, month - 2, 6), 4, 8);
-	        //ride2.setPassenger(user2);
-
-	        Ride ride3 = driver1.addRide("Bilbo2", "Donostia2", UtilDate.newDate(year -1, month - 3, 25), 4, 4);
-	        //ride3.setPassenger(user3);
-
-	        Ride ride4 = driver1.addRide("Donostia2", "Iruña2", UtilDate.newDate(year-1, month - 4, 7), 4, 8);
-	        ride4.setPassenger(user1);
+	        Ride ride1 = driver1.addRide("Donostia2", "Bilbo2", 
+	        	    UtilDate.newDate(year - 1, (month - 1 + 12) % 12, 15), 4, 7); // Asegura que el mes esté en 0-11
+	        	Ride ride2 = driver1.addRide("Donostia2", "Gazteiz2", 
+	        	    UtilDate.newDate(year - 1, (month - 2 + 12) % 12, 6), 4, 8);
+	        	Ride ride3 = driver1.addRide("Bilbo2", "Donostia2", 
+	        	    UtilDate.newDate(year - 1, (month - 3 + 12) % 12, 25), 4, 4);
+	        	Ride ride4 = driver1.addRide("Donostia2", "Iruña2", 
+	        	    UtilDate.newDate(year - 1, (month - 4 + 12) % 12, 7), 4, 8);
 
 	        Ride ride5 = driver2.addRide("Donostia2", "Bilbo2", UtilDate.newDate(year-1, month - 1, 15), 3, 3);
 	        ride5.setPassenger(user2);
 
-	        Ride ride6 = driver2.addRide("Bilbo2", "Donostia2", UtilDate.newDate(year-1, month - 2, 25), 2, 5);
+	        Ride ride6 = driver2.addRide("Bilbo2", "Donostia2", UtilDate.newDate(year-1, month - 2, 25), 5, 5);
 	        //ride6.setPassenger(user3);
 
 	        Ride ride7 = driver2.addRide("Eibar2", "Gasteiz2", UtilDate.newDate(year-1, month - 3, 6), 2, 5);

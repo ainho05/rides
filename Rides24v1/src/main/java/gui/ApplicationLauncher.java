@@ -29,7 +29,13 @@ public class ApplicationLauncher {
 		System.out.println("Locale: "+Locale.getDefault());
 		
 	    //Driver driver=new Driver("driver3@gmail.com", "d3", "Test Driver");
-
+		
+		//it 2
+		if(c.isDatabaseInitialized()) {
+			//llamar a initializeDB()
+			BLFacade businessLogic = new BLFacadeImplementation();
+			businessLogic.initializeBD();
+		}
 		
 		MainGUI a=new MainGUI();
 		a.setVisible(true);
