@@ -1,0 +1,209 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-07 12:02:17 #1 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\mydb.odb' is opened by 20000@LAPTOP-SGCE98M9
+
+[2025-05-07 12:02:17 #2 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' has been recovered (tr. 336-336)
+
+[2025-05-07 12:02:17 #3 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' is opened by 20000@LAPTOP-SGCE98M9
+
+[2025-05-07 12:02:17 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-07 12:02:17 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-07 12:02:17 #6 type] 
+Type domain.User is not enhanced.
+
+[2025-05-07 12:02:17 #7 type] 
+Type domain.Booking is not enhanced.
+
+[2025-05-07 12:02:17 #8 type] 
+Type domain.Review is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-07 12:37:49 #1 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\mydb.odb' is opened by 26688@LAPTOP-SGCE98M9
+
+[2025-05-07 12:37:49 #2 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' has been recovered (tr. 341-341)
+
+[2025-05-07 12:37:49 #3 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' is opened by 26688@LAPTOP-SGCE98M9
+
+[2025-05-07 12:37:49 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-07 12:37:49 #5 type.registry] 
+New type byte[]
+
+[2025-05-07 12:37:49 #6 type.registry] 
+New type domain.Monedero
+
+[2025-05-07 12:37:49 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-07 12:37:49 #8 type] 
+Type domain.User is not enhanced.
+
+[2025-05-07 12:37:49 #9 type] 
+Type domain.Booking is not enhanced.
+
+[2025-05-07 12:37:49 #10 type.registry] 
+New type businessLogic.BLFacadeImplementation$BookingStatus
+
+[2025-05-07 12:37:49 #11 type] 
+Type domain.Review is not enhanced.
+
+[2025-05-07 12:37:49 #12 type] 
+Type domain.Monedero is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-07 12:42:03 #1 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\mydb.odb' is opened by 24508@LAPTOP-SGCE98M9
+
+[2025-05-07 12:42:03 #2 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' has been recovered (tr. 342-347)
+
+[2025-05-07 12:42:03 #3 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' is opened by 24508@LAPTOP-SGCE98M9
+
+[2025-05-07 12:42:03 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-07 12:42:03 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-07 12:42:03 #6 type] 
+Type domain.User is not enhanced.
+
+[2025-05-07 12:42:03 #7 type] 
+Type domain.Booking is not enhanced.
+
+[2025-05-07 12:42:03 #8 type] 
+Type domain.Review is not enhanced.
+
+[2025-05-07 12:42:03 #9 type] 
+Type domain.Monedero is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-07 12:43:02 #1 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\mydb.odb' is opened by 6804@LAPTOP-SGCE98M9
+
+[2025-05-07 12:43:02 #2 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' has been recovered (tr. 352-352)
+
+[2025-05-07 12:43:02 #3 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' is opened by 6804@LAPTOP-SGCE98M9
+
+[2025-05-07 12:43:02 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-07 12:43:02 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-07 12:43:02 #6 type] 
+Type domain.User is not enhanced.
+
+[2025-05-07 12:43:02 #7 type] 
+Type domain.Booking is not enhanced.
+
+[2025-05-07 12:43:02 #8 type] 
+Type domain.Review is not enhanced.
+
+[2025-05-07 12:43:02 #9 type] 
+Type domain.Monedero is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-07 12:46:15 #1 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\mydb.odb' is opened by 23076@LAPTOP-SGCE98M9
+
+[2025-05-07 12:46:15 #2 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' has been recovered (tr. 357-357)
+
+[2025-05-07 12:46:16 #3 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' is opened by 23076@LAPTOP-SGCE98M9
+
+[2025-05-07 12:46:16 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-07 12:46:16 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-07 12:46:16 #6 type] 
+Type domain.User is not enhanced.
+
+[2025-05-07 12:46:16 #7 type] 
+Type domain.Booking is not enhanced.
+
+[2025-05-07 12:46:16 #8 type] 
+Type domain.Review is not enhanced.
+
+[2025-05-07 12:46:16 #9 type] 
+Type domain.Monedero is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-07 12:48:23 #1 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\mydb.odb' is opened by 24624@LAPTOP-SGCE98M9
+
+[2025-05-07 12:48:23 #2 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' has been recovered (tr. 362-362)
+
+[2025-05-07 12:48:23 #3 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' is opened by 24624@LAPTOP-SGCE98M9
+
+[2025-05-07 12:48:23 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-07 12:48:23 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-07 12:48:24 #6 type] 
+Type domain.User is not enhanced.
+
+[2025-05-07 12:48:24 #7 type] 
+Type domain.Booking is not enhanced.
+
+[2025-05-07 12:48:24 #8 type] 
+Type domain.Review is not enhanced.
+
+[2025-05-07 12:48:24 #9 type] 
+Type domain.Monedero is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-05-07 12:55:34 #1 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\mydb.odb' is opened by 16088@LAPTOP-SGCE98M9
+
+[2025-05-07 12:55:35 #2 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' has been recovered (tr. 367-378)
+
+[2025-05-07 12:55:35 #3 store] 
+Database 'C:\Users\ainho\git\rides\Rides24v1\src\main\resources\rides.temp' is opened by 16088@LAPTOP-SGCE98M9
+
+[2025-05-07 12:55:35 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-05-07 12:55:35 #5 type] 
+Type domain.Ride is not enhanced.
+
+[2025-05-07 12:55:35 #6 type] 
+Type domain.User is not enhanced.
+
+[2025-05-07 12:55:35 #7 type] 
+Type domain.Booking is not enhanced.
+
+[2025-05-07 12:55:35 #8 type] 
+Type domain.Review is not enhanced.
+
+[2025-05-07 12:55:35 #9 type] 
+Type domain.Monedero is not enhanced.
+
