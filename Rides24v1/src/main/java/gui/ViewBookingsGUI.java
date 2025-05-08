@@ -4,6 +4,7 @@ import businessLogic.BLFacade;
 import domain.Booking;
 import domain.Ride;
 import domain.User;
+import exceptions.SaldoInsuficienteException;
 
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication; 
@@ -51,7 +52,7 @@ public class ViewBookingsGUI extends JFrame {
         add(lblTitle, BorderLayout.NORTH);
 
         // Definir columnas de la tabla
-        String[] columnNames = {"Passenger", "From", "To", "Date", "Seats"};
+        String[] columnNames = {"Booking ID", "Passenger", "From", "To", "Date", "Seats"};
 
         // Modelo de tabla
         tableModel = new DefaultTableModel(columnNames, 0);
@@ -67,7 +68,8 @@ public class ViewBookingsGUI extends JFrame {
         btnAccept.setEnabled(false);
         btnAccept.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                handleBookingDecision(true);
+                //handleBookingDecision(true);
+                acceptBooking();
             }
         });
         
@@ -115,6 +117,7 @@ public class ViewBookingsGUI extends JFrame {
                 Ride ride = booking.getRide();
 
                 tableModel.addRow(new Object[]{
+                	booking.getBookingId(), // IT3
                     passenger.getEmail(),  // Nombre del pasajero
                     ride.getFrom(),        // Origen del viaje
                     ride.getTo(),          // Destino del viaje
@@ -150,6 +153,47 @@ public class ViewBookingsGUI extends JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Failed to update booking request.", "Error", JOptionPane.ERROR_MESSAGE);
         }
+    }
+    
+    // IT3
+    private void acceptBooking() {
+        int selectedRow = table.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a booking request.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Asumiendo que no tienes el bookingId directamente en la tabla,
+        // podrías necesitar obtenerlo de alguna manera (e.g., pidiendo a la BLFacade
+        // que te devuelva el Booking objeto dado el driverEmail y passengerEmail,
+        // o modificando loadBookings para incluir el bookingId en la tabla - ¡recomendado!)
+        //
+        // Por ahora, para simplificar, asumiré que tienes un método getBookingIdFromSelectedRow()
+        // que debes implementar según tu lógica.
+        int bookingId = getBookingIdFromSelectedRow(selectedRow);
+
+        try {
+            boolean accepted = facade.acceptBooking(bookingId); // Llama al nuevo método
+            if (accepted) {
+                JOptionPane.showMessageDialog(this, "Booking accepted successfully!");
+                loadBookings(); // Recarga las reservas para actualizar la tabla
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to accept booking.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (SaldoInsuficienteException e) {
+            JOptionPane.showMessageDialog(this, "Passenger has insufficient funds: " + e.getMessage(),
+                    "Insufficient Funds", JOptionPane.ERROR_MESSAGE);
+            // Opcional: Aquí podrías querer rechazar automáticamente la reserva
+            // o marcarla de alguna manera especial.
+            handleBookingDecision(false); // Por ejemplo, rechazarla automáticamente
+        } catch (RuntimeException e) {
+            JOptionPane.showMessageDialog(this, "An unexpected error occurred: " + e.getMessage(),
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private int getBookingIdFromSelectedRow(int selectedRow) {
+    	return (int) tableModel.getValueAt(selectedRow, 0);
     }
     //nuevo metodo it3
     private void enviarCorreo(String remitente, String destinatario) {
@@ -187,5 +231,9 @@ public class ViewBookingsGUI extends JFrame {
                 "Aviso", 
                 JOptionPane.WARNING_MESSAGE);
         }
+        
+        
 
-}}
+
+    }    
+}
